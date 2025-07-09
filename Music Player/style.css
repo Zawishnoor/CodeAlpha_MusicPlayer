@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #670386, #8f0270);
+  color: white;
+}
+/* Song List Page */
+#song-list-page {
+  height: 100vh;
+  padding: 40px;
+  text-align: center;
+}
+#song-list-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+#song-list-page h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+#song-list {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#song-list li {
+  padding: 15px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  user-select: none;
+  transition: background 0.2s;
+}
+#song-list li:hover {
+  background: rgba(255,255,255,0.1);
+}
+/* Hidden */
+.hidden {
+  display: none;
+}
+/* Player Page */
+#player-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#player-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+.player-glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cover {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid white;
+}
+input[type="range"] {
+  width: 80%;
+  margin: 10px 0;
+}
+.controls button {
+  background: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+/* Back Button fixed top-right outside the player */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease;
+  z-index: 1000;
+  user-select: none;
+}
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+} 
